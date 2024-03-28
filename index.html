@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -25,6 +26,8 @@
             </div>
         </div>
     </div>
+
+   <!-- ----------------about-------------- -->
     <div id="about">
         <div class="container">
             <div class="row">
@@ -37,8 +40,8 @@
                     about your web application (such as its name, icons, and other properties) to the browser.</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links"onclick="opentab('experience')">Education</p>
-                        <p class="tab-links"onclick="opentab('education')">Experience</p>
+                        <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links"onclick="opentab('education')"> Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -49,14 +52,14 @@
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>ACN Infotech</span><br>Web app Development</li>
                             <li><span>Web Development</span><br>Web app Development</li>
                             <li><span>Web Development</span><br>Web app Development</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>UCEN JNTUK</span><br>Web app Development</li>
                             <li><span>Web Development</span><br>Web app Development</li>
                             <li><span>Web Development</span><br>Web app Development</li>
                         </ul>
@@ -66,11 +69,49 @@
         </div>
     </div>
 
+     <!-- ----------------Services-------------- -->
+     <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1> 
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>This file is typically used for web app manifests, which provide metadata 
+                        about your web application (such as its name, icons, and other properties) to the browser.</p>
+                        <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>Andriod Development</h2>
+                    <p>This file is typically used for web app manifests, which provide metadata 
+                        about your web application (such as its name, icons, and other properties) to the browser.</p>
+                        <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-app-store"></i>
+                    <h2>UI/UX Designer</h2>
+                    <p>This file is typically used for web app manifests, which provide metadata 
+                        about your web application (such as its name, icons, and other properties) to the browser.</p>
+                        <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+     </div>
+
     <script>
         var tablinks=document.getElementsByClassName("tab-links");
         var tabcontents=document.getElementsByClassName("tab-contents");
         function opentab(tabname){
-           
+           for(tablink of tablinks){
+            tablink.classList.remove('active-link');
+           }
+           for(tabcontent of tabcontents){
+            tabcontent.classList.remove('active-tab');
+           }
+           event.currentTarget.classList.add("active-link");
+           document.getElementById(tabname).classList.add("active-tab");
+
         }
 
     </script>
