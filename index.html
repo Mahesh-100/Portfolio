@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/999619e7d9.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
                 <img src="" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>Full Stack Developer</p>
+                
                 <h1>Hi, I'm <span>Mahesh Kumar</span></h1>
+                <p>Full Stack Developer</p>
             </div>
         </div>
     </div>
@@ -31,13 +34,14 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1"></div>
-                <img src="" >
+                <div class="about-col-1">
+                <img src="images/profile.png" ></div>
                 <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>The error messages you're encountering indicate that the browser is unable to load the manifest.json file, 
-                    and it's reporting a syntax error. This file is typically used for web app manifests, which provide metadata 
-                    about your web application (such as its name, icons, and other properties) to the browser.</p>
+                <p>Computer science and Engineering student with a strong foundation in theoretical and practicalaspects of programming. 
+Certified Java Full Stack Developer with skills in both front-end and back-end technologies. 
+Proven ability to apply acquired skills through hands-on projects and coursework.
+Eager to contribute to dynamic software development teams and continuously expand my knowledge in the ever-evolving tech landscape.</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links"onclick="opentab('experience')">Experience</p>
@@ -45,23 +49,25 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Front End Development</span></n><br>HTML,CSS,JavaScript,Bootstrap,React</li>
+                            <li><span>Back End Development</span><br>Java,Servlets,JSP,JDBC,Hibernate,Spring MVC,SpringBoot,MySQL</li>
+                            <li><span>Excel</span><br>Gained some experience when I worked in ACN Infotech</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>ACN Infotech</span><br>Web app Development</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Java Full Stack Developer</span><br>Course from Tech Mahindra SMART Academy 10-10-2023 to 02-10-2024</li>
+                            <li><span>ACN Infotech</span><br>Worked as professional consultant in PO Department</li>
+                            
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>UCEN JNTUK</span><br>Web app Development</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>2019-2023</span><br>University College of Engineering JNTUK-Narasaraopet.<br>
+Bachelor of Technology in Computer Science and Engineering.</li>
+                                                   
+                            <li><span>2017-2019</span><br>Sri Vivekanda Junior College Srungavarapu-Kota.<br>Intermediate- M.P.C</li>
+                            <li><span>2016-2017</span><br>A.P.S.W. Residential School Kopperla.<br>S.S.C</li>
                         </ul>
                     </div>
             </div>
@@ -75,30 +81,129 @@
             <h1 class="sub-title">My Services</h1> 
             <div class="services-list">
                 <div>
-                    <i class="fas fa-code"></i>
-                    <h2>Web Development</h2>
-                    <p>This file is typically used for web app manifests, which provide metadata 
-                        about your web application (such as its name, icons, and other properties) to the browser.</p>
-                        <a href="#">learn more</a>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Back End Development</h2>
+                    <p class="description">Professional back end development services tailored to your needs.</p>
+                    <p class="extra-description">Specialize in Java, Spring Boot, and database management. Ensures robust, scalable, and efficient back end solutions for your projects.</p>
+                        <a href="#" class="learn-more">Learn more</a>
                 </div>
                 <div>
-                    <i class="fas fa-crop-alt"></i>
-                    <h2>Andriod Development</h2>
-                    <p>This file is typically used for web app manifests, which provide metadata 
-                        about your web application (such as its name, icons, and other properties) to the browser.</p>
-                        <a href="#">learn more</a>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Font End Development</h2>
+                    <p class="description">Expert front end development services to enhance user experiences..</p>
+                    <p class="extra-description">Front end development services focus on creating intuitive and responsive user interfaces using HTML, CSS, and JavaScript.Prioritize usability and aesthetics to deliver exceptional user experiences.</p>
+                        <a href="#" class="learn-more">Learn more</a>
                 </div>
                 <div>
-                    <i class="fas fa-app-store"></i>
-                    <h2>UI/UX Designer</h2>
-                    <p>This file is typically used for web app manifests, which provide metadata 
-                        about your web application (such as its name, icons, and other properties) to the browser.</p>
-                        <a href="#">learn more</a>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Data Analytics</h2>
+                    <p class="description">Data analytics solutions to help you make informed business decisions.</p>
+                    <p class="extra-description">Data analytics services involve collecting, processing, and analyzing data to extract valuable insights. Use cutting-edge tools and techniques to empower your business with data-driven decision-making.</p>
+                        <a href="#" class="learn-more">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-file-excel"></i>
+                    <h2>Excel</h2>
+                    <p class="description">Excel services to streamline your data management processes.</p>
+                    <p class="extra-description">Excel services cover a wide range of functionalities, including data organization, analysis, and visualization. We optimize Excel spreadsheets to automate tasks and improve efficiency in your data management workflows.</p>
+
+                        <a href="#" class="learn-more">Learn more</a>
                 </div>
             </div>
         </div>
      </div>
+     <!-- ----------------My Works-------------- -->
+     <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/ser-2.jpg">
+                    <div class="layer">
+                        <h3>Payment App</h3>
+                        <p>Done by using Spring MVC, Hibernate and MySQL database</p>
+                         <a href="https://github.com/Mahesh-100/PaymentApp.git"> <i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.jpg">
+                    <div class="layer">
+                        <h3>Jewellary website</h3>
+                        <p>A Demo Bootstrap Project</p>
+                         <a href="https://mahesh-100.github.io/Demo_Bootstrap_project/"> <i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-1.jpg">
+                    <div class="layer">
+                        <h3>Calculator</h3>
+                        <p>Done by using React</p>
+                         <a href="https://mahesh-100.github.io/Calculator/"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-1.jpg">
+                    <div class="layer">
+                        <h3>Calculator</h3>
+                        <p>foegfogorhgsbkrgbkrgbrggrg</p>
+                         <a href="https://mahesh-100.github.io/Calculator/"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/ser-2.jpg">
+                    <div class="layer">
+                        <h3>Payment App</h3>
+                        <p>foegfogorhgsbkrgbkrgbrggrg</p>
+                         <a href="https://github.com/Mahesh-100/PaymentApp.git"> <i class="fa-solid fa-link"></i></i></a>
+                    </div>  
+                </div>
+                <div class="work">
+                    <img src="images/ser-2.jpg">
+                    <div class="layer">
+                        <h3>Payment App</h3>
+                        <p>foegfogorhgsbkrgbkrgbrggrg</p>
+                         <a href="https://github.com/Mahesh-100/PaymentApp.git"> <i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+                
+           
+        </div>
+       
+        <a href="#portfolio" id="btn"   class="btn">See more</a>
+     </div>
+     </div>
 
+     <!-- ----------------Contact-------------- -->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>maheshkumar.ucen@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>8978876751</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Mahesh-100"><i class="fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""> <i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                    <a href="images/RESUME.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright ©</i>Mahesh. Made with <i class="fa-solid fa-heart"></i>  by Mahesh Kumar</p>
+        </div>
+     </div>
+     
     <script>
         var tablinks=document.getElementsByClassName("tab-links");
         var tabcontents=document.getElementsByClassName("tab-contents");
@@ -115,5 +220,68 @@
         }
 
     </script>
+    <script>
+        var sidemenu=document.getElementById('sidemenu');
+        function openmenu(){
+            sidemenu.style.right='0';
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+        const learnMoreLinks = document.querySelectorAll('.learn-more');
+    
+        learnMoreLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const description = this.previousElementSibling; // Get the description
+                const extraDescription = this.parentElement.querySelector('.extra-description'); // Get the extra description
+                description.classList.toggle('show');
+                extraDescription.classList.toggle('show');
+                if (description.classList.contains('show')) {
+                    this.textContent = 'Show less';
+                } else {
+                    this.textContent = 'Learn more';
+                }
+            });
+        });
+    });
+    
+          </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzu7oYjmg146dcIapYOoT2tI4vgL4AGIFwVMpcf5fEA54mLCP3nsGAEl3AtPGyrfLzG/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById('msg')
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const showMoreBtn = document.getElementById('btn');
+    const projectsContainer = document.querySelector('.work-list');
+
+    showMoreBtn.addEventListener('click', function() {
+        projectsContainer.classList.toggle('show-all');
+        if (projectsContainer.classList.contains('show-all')) {
+            showMoreBtn.textContent = 'Show Less';
+        } else {
+            showMoreBtn.textContent = 'See More';
+        }
+    });
+});
+      </script>     
 </body>
 </html>
