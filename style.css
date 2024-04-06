@@ -179,13 +179,10 @@ nav ul li a:hover::after{
 }
 .services-list p{
     font-size: 18px;
+    line-height: 1.5;
 }
 .extra-description {
-    display: none;
-    margin-top: 10px; /* Adjust as needed */
-}
-.show {
-    display: block !important; /* Add !important to ensure it overrides other display settings */
+    display: none; /* Hide the extra description by default */
 }
 
 .services-list div a{

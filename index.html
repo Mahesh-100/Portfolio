@@ -6,12 +6,13 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/999619e7d9.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.png" class="logo">
+                <img src="images/logo.jpg" class="logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -25,7 +26,7 @@
             <div class="header-text">
                 
                 <h1>Hi, I'm <span>Mahesh Kumar</span></h1>
-                <p>Full Stack Developer</p>
+                <p>Java Full Stack Developer</p>
             </div>
         </div>
     </div>
@@ -83,28 +84,28 @@ Bachelor of Technology in Computer Science and Engineering.</li>
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>Back End Development</h2>
-                    <p class="description">Professional back end development services tailored to your needs.</p>
+                    <p class="description">Professional back end development services tailored to your needs.</p><br>
                     <p class="extra-description">Specialize in Java, Spring Boot, and database management. Ensures robust, scalable, and efficient back end solutions for your projects.</p>
                         <a href="#" class="learn-more">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-crop"></i>
                     <h2>Font End Development</h2>
-                    <p class="description">Expert front end development services to enhance user experiences..</p>
-                    <p class="extra-description">Front end development services focus on creating intuitive and responsive user interfaces using HTML, CSS, and JavaScript.Prioritize usability and aesthetics to deliver exceptional user experiences.</p>
+                    <p class="description">Expert front end development services to enhance user experiences..</p><br>
+                    <p class="extra-description">Frontend development services focus on creating intuitive and responsive user interfaces using HTML, CSS, and JavaScript. Prioritize usability and aesthetics to deliver exceptional user experiences.</p>
                         <a href="#" class="learn-more">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-database"></i>
                     <h2>Data Analytics</h2>
-                    <p class="description">Data analytics solutions to help you make informed business decisions.</p>
+                    <p class="description">Data analytics solutions to help you make informed business decisions.</p><br>
                     <p class="extra-description">Data analytics services involve collecting, processing, and analyzing data to extract valuable insights. Use cutting-edge tools and techniques to empower your business with data-driven decision-making.</p>
                         <a href="#" class="learn-more">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-file-excel"></i>
                     <h2>Excel</h2>
-                    <p class="description">Excel services to streamline your data management processes.</p>
+                    <p class="description">Excel services to streamline your data management processes.</p><br>
                     <p class="extra-description">Excel services cover a wide range of functionalities, including data organization, analysis, and visualization. We optimize Excel spreadsheets to automate tasks and improve efficiency in your data management workflows.</p>
 
                         <a href="#" class="learn-more">Learn more</a>
@@ -138,7 +139,7 @@ Bachelor of Technology in Computer Science and Engineering.</li>
                     <div class="layer">
                         <h3>Bank Application</h3>
                         <p>Done by using Servlets,JSP,JDBC and MySQL database</p>
-                         <a href="https://github.com/Mahesh-100/PaymentApp.git"> <i class="fa-solid fa-link"></i></i></a>
+                         <a href="https://github.com/Mahesh-100/TMF_Banking.git"> <i class="fa-solid fa-link"></i></i></a>
                     </div>  
                 </div>
                 <div class="work">
@@ -215,27 +216,7 @@ Bachelor of Technology in Computer Science and Engineering.</li>
             sidemenu.style.right="-200px";
         }
     </script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-        const learnMoreLinks = document.querySelectorAll('.learn-more');
-    
-        learnMoreLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const description = this.previousElementSibling; // Get the description
-                const extraDescription = this.parentElement.querySelector('.extra-description'); // Get the extra description
-                description.classList.toggle('show');
-                extraDescription.classList.toggle('show');
-                if (description.classList.contains('show')) {
-                    this.textContent = 'Show less';
-                } else {
-                    this.textContent = 'Learn more';
-                }
-            });
-        });
-    });
-    
-          </script>
+        
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzu7oYjmg146dcIapYOoT2tI4vgL4AGIFwVMpcf5fEA54mLCP3nsGAEl3AtPGyrfLzG/exec'
         const form = document.forms['submit-to-google-sheet']
@@ -254,20 +235,42 @@ Bachelor of Technology in Computer Science and Engineering.</li>
             .catch(error => console.error('Error!', error.message))
         })
       </script>
+            </script>  
+            
       <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    const showMoreBtn = document.getElementById('btn');
-    const projectsContainer = document.querySelector('.work-list');
+        // JavaScript code to toggle visibility of extra description and change link text
+        document.addEventListener('DOMContentLoaded', function () {
+            var learnMoreLinks = document.querySelectorAll('.learn-more');
+            learnMoreLinks.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent the default behavior of anchor tags
+                    var extraDescription = this.previousElementSibling;
+                    if (extraDescription.style.display === 'none') {
+                        extraDescription.style.display = 'block';
+                        this.textContent = 'Show less';
+                    } else {
+                        extraDescription.style.display = 'none';
+                        this.textContent = 'Learn more';
+                    }
+                });
+            });
+        });
+    </script> 
 
-    showMoreBtn.addEventListener('click', function() {
-        projectsContainer.classList.toggle('show-all');
-        if (projectsContainer.classList.contains('show-all')) {
-            showMoreBtn.textContent = 'Show Less';
-        } else {
-            showMoreBtn.textContent = 'See More';
-        }
-    });
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+const showMoreBtn = document.getElementById('btn');
+const projectsContainer = document.querySelector('.work-list');
+
+showMoreBtn.addEventListener('click', function() {
+    projectsContainer.classList.toggle('show-all');
+    if (projectsContainer.classList.contains('show-all')) {
+        showMoreBtn.textContent = 'Show Less';
+    } else {
+        showMoreBtn.textContent = 'See More';
+    }
 });
-      </script>     
+});
+  </script>
 </body>
 </html>
